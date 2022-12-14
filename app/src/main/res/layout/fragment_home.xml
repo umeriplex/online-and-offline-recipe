@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sLauOut"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ran_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/random_meal_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_220sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_background" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_8sdp">
+
+                            <TextView
+                                android:id="@+id/ran_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/jacques_francois"
+                                android:maxLines="2"
+                                android:text="Biryani"
+                                android:textColor="@color/purple_500"
+                                android:textSize="@dimen/_18ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/ran_country"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Italian"
+                                android:textColor="@color/blac1"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:background="#BDBDBD" />
+
+                            <TextView
+                                android:id="@+id/ran_recipe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-light"
+                                android:maxLines="5"
+                                android:text="@string/dummy_text"
+                                android:textColor="@color/blac1"
+                                android:textSize="@dimen/_14ssp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gif_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_300sdp"
+                    android:src="@drawable/anim"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/swipeDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/croissant_one"
+                    android:text="Swipe Down to Refresh"
+                    android:textColor="@color/purple_500"
+                    android:textSize="@dimen/_18ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/ran_card"
+                    app:layout_constraintStart_toStartOf="@+id/ran_card"
+                    app:layout_constraintTop_toBottomOf="@+id/ran_card" />
+
+                <ImageView
+                    android:id="@+id/downArrow"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:src="@drawable/down"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@+id/swipeDown"
+                    app:layout_constraintTop_toBottomOf="@+id/ran_card"
+                    app:tint="@color/purple_500" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</FrameLayout>
+

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Look n Cook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_text">Masla dalo or phr anda dalo or paka kar khaa jaoMasla dalo or phr anda dalo or paka kar khaa jaoMasla dalo or phr anda dalo or paka kar khaa jaoMasla dalo or phr anda dalo or paka kar khaa jao</string>
+
+    <string name="app_id">ca-app-pub-3267971231306336~2730490298</string>
+    <string name="inter_ad_unit_id">ca-app-pub-3267971231306336/5165081944</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3267971231306336/3222827772</string>
+</resources>
